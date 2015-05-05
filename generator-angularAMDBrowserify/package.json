@@ -1,0 +1,25 @@
+{
+  "name": "generator-angularAMDBrowserify",
+  "version": "1.0.0",
+  "description": "This is AngularAMD scaffold with Browserify.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "Angular",
+    "AngularJS",
+    "AMD",
+    "broswerify",
+    "AngularAMD",
+    "yeoman-generator"
+  ],
+  "author": "Amit Thakkar",
+  "license": "ISC",
+  "dependencies": {
+    "yeoman-generator": "^0.19.2"
+  }
+}
