@@ -1,25 +1,30 @@
 {
   "name": "generator-angular-amd",
-  "version": "1.0.0",
-  "description": "This is AngularAMD scaffold with Browserify.",
-  "main": "index.js",
+  "version": "0.0.0",
+  "description": "This is Angular AMD generator with Browserify.Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "https://github.com/AmitThakkar/generator-angular-amd-browserify",
+  "author": {
+    "name": "Amit Thakkar",
+    "email": "vigildbest@gmail.com",
+    "url": "https://github.com/AmitThakkar"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha"
   },
   "files": [
     "app"
   ],
   "keywords": [
-    "Angular",
-    "AngularJS",
-    "AMD",
-    "broswerify",
-    "AngularAMD",
     "yeoman-generator"
   ],
-  "author": "Amit Thakkar",
-  "license": "ISC",
   "dependencies": {
-    "yeoman-generator": "^0.19.2"
+    "yeoman-generator": "^0.19.0",
+    "chalk": "^1.0.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
   }
 }
