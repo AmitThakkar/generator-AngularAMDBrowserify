@@ -26,6 +26,26 @@
     writing: {
       app: function () {
         this.fs.copy(
+          this.templatePath('sample/sample.controller.js'),
+          this.destinationPath('app/sample/sample.controller.js')
+        );
+        this.fs.copy(
+          this.templatePath('sample/sample.html'),
+          this.destinationPath('app/sample/sample.html')
+        );
+        this.fs.copy(
+          this.templatePath('sample/sample.main.js'),
+          this.destinationPath('app/sample/sample.main.js')
+        );
+        this.fs.copy(
+          this.templatePath('sample/sample.service.js'),
+          this.destinationPath('app/sample/sample.service.js')
+        );
+        this.fs.copy(
+          this.templatePath('sample/sample.spec.js'),
+          this.destinationPath('app/sample/sample.spec.js')
+        );
+        this.fs.copy(
           this.templatePath('_package.json'),
           this.destinationPath('package.json')
         );
