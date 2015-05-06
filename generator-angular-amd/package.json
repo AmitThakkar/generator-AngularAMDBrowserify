@@ -1,5 +1,5 @@
 {
-  "name": "generator-angularAMDBrowserify",
+  "name": "generator-angular-amd",
   "version": "1.0.0",
   "description": "This is AngularAMD scaffold with Browserify.",
   "main": "index.js",
