@@ -6,12 +6,10 @@
   var yeoman = require('yeoman-generator');
   var chalk = require('chalk');
   var yosay = require('yosay');
-
   module.exports = yeoman.generators.Base.extend({
     initializing: function () {
       this.pkg = require('../package.json');
     },
-
     prompting: function () {
       var done = this.async();
       this.log(yosay('Welcome to the Angular AMD with Browserify generator!'));
@@ -21,17 +19,10 @@
         message: 'Your project name',
         default: this.appname
       }, function (answers) {
-        this.log(answers.projectName);
+        this.log("Project Name: ", answers.projectName);
         done();
       }.bind(this));
     },
-    method1: function () {
-      console.log('method 1 just ran');
-    },
-    method2: function () {
-      console.log('method 2 just ran');
-    },
-
     writing: {
       app: function () {
         this.fs.copy(
@@ -39,7 +30,6 @@
           this.destinationPath('package.json')
         );
       },
-
       projectfiles: function () {
         this.fs.copy(
           this.templatePath('editorconfig'),
@@ -51,7 +41,6 @@
         );
       }
     },
-
     install: function () {
       //this.installDependencies();
     }
