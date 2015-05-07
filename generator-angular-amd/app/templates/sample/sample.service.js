@@ -5,7 +5,7 @@
     'use strict';
     var sampleApp = ng.module("angular-amd.sample");
     sampleApp.service("SampleService", [function () {
-        this.getName = function() {
+        this.getName = function () {
             return "Sample Service";
         };
     }]);
