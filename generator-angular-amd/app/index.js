@@ -9,7 +9,7 @@
     module.exports = generators.Base.extend({
         constructor: function () {
             generators.Base.apply(this, arguments);
-            this.argument('appname', {type: String, required: false});
+            this.argument('appname', {type: String, required: false, desc: "Application Name"});
         },
         initializing: function () {
             this.pkg = require('../package.json');
@@ -24,16 +24,40 @@
                     type: 'input',
                     name: 'projectName',
                     message: 'Your project name',
-                    default: this.appname,
-                    store: true
+                    default: this.appname
                 }, function (answers) {
                     this.log("Project Name: ", answers.projectName);
                     done();
                 }.bind(this));
             }
         },
+        init: function () {
+            this.helperMethod = function () {
+                console.log('won\'t be called automatically');
+            };
+        },
         writing: {
             app: function () {
+                this.fs.copy(
+                    this.templatePath('angular-amd.js'),
+                    this.destinationPath('app/angular-amd.js')
+                );
+                this.fs.copy(
+                    this.templatePath('config.js'),
+                    this.destinationPath('app/config.js')
+                );
+                this.fs.copy(
+                    this.templatePath('dynamicBehaviour.js'),
+                    this.destinationPath('app/dynamicBehaviour.js')
+                );
+                this.fs.copy(
+                    this.templatePath('index.html'),
+                    this.destinationPath('index.html')
+                );
+                this.fs.copy(
+                    this.templatePath('gulpfile.js'),
+                    this.destinationPath('gulpfile.js')
+                );
                 this.fs.copy(
                     this.templatePath('sample/sample.controller.js'),
                     this.destinationPath('app/sample/sample.controller.js')
@@ -71,7 +95,7 @@
             }
         },
         install: function () {
-            //this.installDependencies();
+            this.installDependencies();
         }
     });
 })(module, require);
