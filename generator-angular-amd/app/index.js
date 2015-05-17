@@ -4,7 +4,6 @@
 (function (module, require) {
     'use strict';
     var generators = require('yeoman-generator').generators;
-    var chalk = require('chalk');
     var yosay = require('yosay');
     module.exports = generators.Base.extend({
         constructor: function () {
