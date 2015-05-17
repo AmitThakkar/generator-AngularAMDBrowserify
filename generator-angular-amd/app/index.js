@@ -47,10 +47,6 @@
                     this.destinationPath('app/config.js')
                 );
                 this.fs.copy(
-                    this.templatePath('dynamicBehaviour.js'),
-                    this.destinationPath('app/dynamicBehaviour.js')
-                );
-                this.fs.copy(
                     this.templatePath('index.html'),
                     this.destinationPath('index.html')
                 );
@@ -95,7 +91,7 @@
             }
         },
         install: function () {
-            this.installDependencies();
+            this.npmInstall();
         }
     });
 })(module, require);
